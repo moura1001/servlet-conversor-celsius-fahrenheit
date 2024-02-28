@@ -5,11 +5,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Conversor escalas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="container">
+            <div id="container__title">
+                <h1>Realize uma conversão entre as escalas</h1>
+            </div>
+            <div id="container__form">
+                <form action="/converter">
+                    <input type="number" id="temperatura" name="temperatura" placeholder="ex.: 26.6, -12.2, 80, 212" />
+                    <div id="container__radioGroup">
+                        <div class="radioGroup">
+                            <input type="radio" id="fahrenheit" name="escala" value="F" checked />
+                            <label for="fahrenheit">Celsius para Fahrenheit</label>
+                        </div>
+                        <div class="radioGroup">
+                            <input type="radio" id="celsius" name="escala" value="C" />
+                            <label for="celsius">Fahrenheit para Celsius</label>
+                        </div>
+                    </div>
+                    <input type="submit" id="btnSubmit" value="Converter" />
+                </form>
+            </div>
+        </div>
     </body>
 </html>
