@@ -16,8 +16,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <h1>Realize uma conversão entre as escalas</h1>
             </div>
             <div id="container__form">
-                <form action="/converter">
-                    <input type="number" id="temperatura" name="temperatura" placeholder="ex.: 26.6, -12.2, 80, 212" />
+                <form method="get" action="/servlet-conversor-celsius-fahrenheit/converter">
+                    <input type="text" id="temperatura" name="temperatura"
+                           pattern="^-?\d+(\,\d{1,2})?$" title="deve ser um número com no máximo 2 casas decimais"
+                           placeholder="ex.: 26,6 -12,2 80 212" />
                     <div id="container__radioGroup">
                         <div class="radioGroup">
                             <input type="radio" id="fahrenheit" name="escala" value="F" checked />
